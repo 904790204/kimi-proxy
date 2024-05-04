@@ -1,0 +1,37 @@
+.hostEditor {
+  height: 100%;
+  position: relative;
+}
+.hostEditor::after {
+  width: 50px;
+  position: absolute;
+  background-color: #f0f0f0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 0;
+  content: ' ';
+}
+.hostEditorLine {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  min-height: 20px;
+  font-size: 16px;
+}
+
+.hostEditorComment {
+  color: rgb(4, 196, 45);
+}
+
+.hostEditorError {
+  color: rgb(255, 72, 0);
+}
+
+.hostEditorSuccess {
+  color: rgb(0, 106, 255);
+  font-weight: 500;
+}
+.hostEditorSuccess span:last-of-type {
+  color: #333333;
+}

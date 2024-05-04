@@ -1,0 +1,26 @@
+.mock {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .header{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    .operate {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      :global(.ant-btn) {
+        margin-left: 10px;
+      }
+      .operateIcon {
+        margin-left: 10px;
+        cursor: pointer;
+        :hover{
+          color: #1677ff;
+        }
+      }
+    }
+  }
+}

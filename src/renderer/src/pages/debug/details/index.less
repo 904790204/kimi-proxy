@@ -1,0 +1,20 @@
+
+.valueItem {
+  display: flex;
+  .text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  :global(.anticon){
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: auto;
+    visibility: hidden;
+  }
+  &:hover :global(.anticon) {
+    visibility: visible;
+  }
+}

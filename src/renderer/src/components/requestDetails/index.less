@@ -1,0 +1,100 @@
+.intercept {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.filter {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  .number {
+    // margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+
+    p {
+      margin-right: 10px;
+    }
+
+    span {
+      color: #1677ff;
+      font-weight: 700;
+      padding: 0 2px;
+
+      &.warn {
+        color: #faad14;
+      }
+
+      &.error {
+        color: rgb(255, 42, 0);
+      }
+    }
+  }
+
+  .legend {
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    background-color: #ffffff;
+    margin-left: auto;
+
+    span {
+      margin-right: 4px;
+    }
+
+    i {
+      width: 10px;
+      height: 6px;
+      border-radius: 100%;
+      margin-right: 12px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.list {
+  // flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.list {
+
+  :global(.virtual-table .ant-table-container:before,
+    .virtual-table .ant-table-container:after) {
+    display: none;
+  }
+
+  :global(.ant-table-cell) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 40px;
+  }
+}
+
+.preview {
+  height: calc(100vh - 104px);
+  margin-top: -16px;
+  margin-left: -24px;
+  margin-right: -10px;
+  position: relative;
+
+  .copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: #1677ff;
+    }
+  }
+}

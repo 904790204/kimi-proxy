@@ -1,0 +1,50 @@
+.mockDetails {
+  // width: 100%;
+  flex: 1;
+  display: flex;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0 0 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  .mockEdit {
+    width: 400px;
+    border-left: 1px solid #e8e8e8;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mockOperate {
+    :global(.ant-btn-group) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      flex: 1;
+    }
+  }
+  .headersView {
+    .item {
+      display: flex;
+      font-size: 14px;
+      span:first-of-type {
+        color: #333333;
+        margin-right: 10px;
+      }
+      span:last-of-type {
+        color: #888888;
+      }
+    }
+  }
+}
+.headerForm {
+  &>div {
+    align-items: start !important;
+  }
+  :global(.anticon-minus-circle) {
+    margin-top: 9px;
+  }
+}

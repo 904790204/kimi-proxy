@@ -1,0 +1,33 @@
+.menu {
+  width: 140px;
+  height: 100%;
+  background-color: #1677ff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 80px 4px 0;
+  box-sizing: border-box;
+  .item {
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 8px;
+    :global(.anticon) {
+      margin-right: 6px;
+      font-size: 18px;
+      margin-left: -2px;
+    }
+    &.active {
+      color: #1677ff;
+      background-color: #e6f4ff;
+      font-weight: 700;
+    }
+  }
+}

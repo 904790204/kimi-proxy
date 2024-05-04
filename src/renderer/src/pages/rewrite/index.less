@@ -1,0 +1,115 @@
+.rewrite {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.rewriteHeader {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.rewriteContent {
+  display: flex;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 10px;
+  flex: 1;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.rewriteGroup {
+  width: 30%;
+  border-left: 1px solid #e8e8e8;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    border-radius: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+    background-color: #f6f6f6;
+    margin-bottom: 8px;
+    .label {
+      font-size: 14px;
+      color: #333333;
+      cursor: pointer;
+    }
+    &.active, &:hover {
+      background-color: #e6f4ff;
+    }
+    .operate {
+      :global(.anticon) {
+        margin-right: 6px;
+        font-size: 12px;
+      }
+      :global(.ant-switch) {
+        transform: scale(0.8);
+      }
+    }
+  }
+}
+.rewriteCode {
+  flex: 1;
+}
+
+.editor {
+  height: 100%;
+  position: relative;
+  &::after {
+    width: 50px;
+    position: absolute;
+    background-color: #f0f0f0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 0;
+    content: ' ';
+  }
+  .line {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    .index {
+      width: 50px;
+      background-color: #f0f0f0;
+      color: #333333;
+      text-align: right;
+      padding-right: 14px;
+      box-sizing: border-box;
+    }
+    .text {
+      min-height: 22px;
+      outline: none;
+      line-height: 22px;
+      flex: 1;
+      font-size: 16px;
+      color: rgb(255, 72, 0);
+      padding-left: 10px;
+      caret-color: #333333;
+      &.disable {
+        color: rgb(4, 196, 45);
+      }
+      &.success {
+        color: rgb(0, 106, 255);
+        font-weight: 500;
+      }
+      span:last-of-type {
+        color: #333333;
+      }
+    }
+    &.active {
+      background-color: rgba(0,0,0,0.07);
+      .index {
+        background-color: #dcdcdc;
+      }
+    }
+  }
+}
